@@ -36,6 +36,8 @@ RUN \
 ADD etc/supervisor/conf.d/kibana.conf /etc/supervisor/conf.d/kibana.conf
 
 EXPOSE 80
+EXPOSE 9200
+EXPOSE 9300
 
 CMD [ "/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf" ]
 
